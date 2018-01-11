@@ -5,7 +5,7 @@ html, body, div {
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
-        background-color: aqua;
+/*        background-color: aqua;*/
 	}
 
 /*dev*/
@@ -13,8 +13,23 @@ h1{
     margin: 0;
 }
 
+.wrapper {
+    background-image: url(img/more_copy.png);
+    background-size: 100% 100%;
+}
 
 .container {
-    height: 786px;
-    background-color: cornflowerblue
+    height: 768px;
+/*    background-color: cornflowerblue*/
 }
+
+.bottom {
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space:nowrap;
+}
+    .bottom-content{
+        width: 1024px;
+        display: inline-block;
+        vertical-align: top;
+    }
