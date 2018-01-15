@@ -43,6 +43,7 @@ h1{
 
 .container {
     height: 768px;
+    position: relative;
 /*    background-color: cornflowerblue*/
 }
 
@@ -225,4 +226,30 @@ input[type=range]::-webkit-slider-thumb {
   top: 10px;
   border-right: 0;
   border-top: 0;
+}
+
+
+.middle-text {
+  font-size: 47px;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 100;
+  padding-top: 30%;
+}
+
+#two {
+    background: url(img/test.png) 100% 100% no-repeat
+}
+
+#three-one {
+    background: url(img/3_1.png) 100% 100% no-repeat;
+}
+
+#three-two {
+    background: url(img/3_2.png) 100% 100% no-repeat;
+}
+
+#three-three {
+    background: url(img/3_3.png) 100% 100% no-repeat;
 }
