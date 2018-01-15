@@ -1,9 +1,22 @@
+/*шрифты*/
+	@font-face {
+			font-family: "GothamProLight";
+			src: url("../fonts/GothamProLight/GothamProLight.eot");
+			src: url("../fonts/GothamProLight/GothamProLight.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/GothamProLight/GothamProLight.woff") format("woff"),
+			url("../fonts/GothamProLight/GothamProLight.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+
 html, body, div {
 		margin: 0;
 		padding: 0;
 		border: 0;
 		font-size: 100%;
 		font: inherit;
+        font-family: "GothamProLight";
+        color: white;
 		vertical-align: baseline;
 /*        background-color: aqua;*/
 	}
@@ -12,6 +25,8 @@ html, body, div {
 h1{
     margin: 0;
 }
+
+
 
 .wrapper {
     position: relative;
@@ -66,22 +81,10 @@ h1{
     left: calc(50% - 309px);
 }
 
-.slider {
-  margin-bottom: 50px;
-  width: 618px;
-  height: 12px;
-  background: #E0E0E0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#E0E0E0), to(#EEEEEE));
-  background: linear-gradient(left top, #E0E0E0, #EEEEEE);
-}
-
-.thumb {
-  position: relative;
-  top: -43px;
-  width: 86px;
-  height: 111px;
-  border-radius: 3px;
-  background-image:url(img/range_input.png);
+    .range-years {
+        text-align: justify;
+        font-size: 17px;
+    }
 /*  cursor: pointer;*/
 /*
     box-shadow: 
@@ -102,8 +105,8 @@ h1{
 	-558px 0 #d1eaff, -571px 0 #d1eaff, -584px 0 #d1eaff,
 	-587px 0 #d1eaff, -600px 0 #d1eaff, -613px 0 #d1eaff,
 	-618px 0 #d1eaff;
-*/
 }
+*/
 
 /*
 input[type=range]::-webkit-slider-thumb {
@@ -129,5 +132,36 @@ input[type=range]::-webkit-slider-thumb {
 	-558px 0 #d1eaff, -571px 0 #d1eaff, -584px 0 #d1eaff,
 	-587px 0 #d1eaff, -600px 0 #d1eaff, -613px 0 #d1eaff,
 	-618px 0 #d1eaff;
-*/
 }
+*/
+
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0;
+  background: #435063;
+  border-radius: 1.3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 55px;
+  width: 43px;
+  border-radius: 3px;
+  background-color: transparent;
+  background: url(img/range_thumb.png);
+  cursor: pointer;
+  margin-top: -25px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+
