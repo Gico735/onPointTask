@@ -1,9 +1,5 @@
 $(document).ready(function(){
     
-    $("#one").on("click",function(){
-        alert('asdasd');
-         $(".bottom").scrollTop(9999);
-    })
    
 
 //прокрутка экрана
@@ -21,6 +17,7 @@ function upSwipe(event){
     if (top == 768){
         $('.pagination-circle-active:eq(0)').fadeOut();
         $('.pagination-circle-active:eq(1)').fadeIn();
+        $('.next').hide();
     }
     else {
         $('.pagination-circle-active:eq(1)').fadeOut();
@@ -39,6 +36,7 @@ function downSwipe(event){
     else {
         $('.pagination-circle-active:eq(1)').fadeOut();
         $('.pagination-circle-active:eq(0)').fadeIn();
+        $('.next').show();
     }
         $('body,html').animate({scrollTop: top}, 500);
 }
