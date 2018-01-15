@@ -37,8 +37,7 @@ h1{
 
 .wrapper {
     position: relative;
-    background-image: url(img/more_copy.png);
-    background-size: 100% 100%;
+    background: url("img/testCopy.png") 100% 100% no-repeat;
 }
 
 .container {
@@ -239,7 +238,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #two {
-    background: url(img/test.png) 100% 100% no-repeat
+    background: url(img/test.png) 100% 100% no-repeat;
 }
 
 #three-one {
