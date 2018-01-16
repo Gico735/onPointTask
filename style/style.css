@@ -247,7 +247,35 @@ input[type=range]::-webkit-slider-thumb {
         left: 83px;
         top: 109px;
     }
+    
+    .text-top {
+        color: #0d319c;
+        text-align: left;
+        position: absolute;
+        left: 70px;
+        top: 165.5px;
+        font-weight: 600;
+    }
 
+.Txt_headline {
+  font-size: 47.757px;
+  font-family: "GothamPro";
+  color: rgb(13, 49, 156);
+  line-height: 1.2;
+  text-align: left;
+  -moz-transform: matrix( 2.09302578296686,0,0,2.09395421374965,0,0);
+  -webkit-transform: matrix( 2.09302578296686,0,0,2.09395421374965,0,0);
+  -ms-transform: matrix( 2.09302578296686,0,0,2.09395421374965,0,0);
+  position: absolute;
+  left: 576.385px;
+  top: 331.549px;
+  z-index: 37;
+}
+
+#one {
+     background: url(img/tab-top.png) 100% 100% no-repeat;
+    background-position: left 42px top 27px;
+}
 
 #two {
     background: url(img/test.png) 100% 100% no-repeat;
