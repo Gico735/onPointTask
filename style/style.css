@@ -228,27 +228,42 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 
-.middle-text {
+.text {
   font-size: 47px;
   color: rgb(255, 255, 255);
   line-height: 1.2;
-  text-align: center;
   font-weight: 100;
-  padding-top: 30%;
 }
+
+    .text-middle {
+  padding-top: 30%;
+  text-align: center;
+    }
+
+    .text-bottom {
+        font-size: 30px;
+        text-align: left;
+        position: absolute;
+        left: 83px;
+        top: 109px;
+    }
+
 
 #two {
     background: url(img/test.png) 100% 100% no-repeat;
 }
 
 #three-one {
-    background: url(img/3_1.png) 100% 100% no-repeat;
+    background: url(img/3_1.png) 100% 100% no-repeat,
+        url(img/tab-1988.png) 100% 100% no-repeat;
 }
 
 #three-two {
-    background: url(img/3_2.png) 100% 100% no-repeat;
+    background: url(img/3_2.png) 100% 100% no-repeat,
+        url(img/tab-2009.png) 100% 100% no-repeat;
 }
 
 #three-three {
-    background: url(img/3_3.png) 100% 100% no-repeat;
+    background: url(img/3_3.png) 100% 100% no-repeat,
+        url(img/tab-2016.png) 100% 100% no-repeat;
 }
