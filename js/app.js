@@ -10,11 +10,9 @@ $(document).ready(function(){
 
 //прокрутка экрана
 //инициализация свайпов
-$(".wrapper").swipe( {
+$(".container").swipe( {
         swipeUp:upSwipe,
         swipeDown:downSwipe,
-//        swipeLeft:blyat,
-        maxTimeThreshold: 200,
         threshold:100
 });
 
