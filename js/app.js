@@ -1,8 +1,11 @@
-
+let sliderValTop = 1;
+let sliderValMiddle = 0;
+let sliderValBottom = 0;
 
 $(document).ready(function(){
+    
 
-    $(".bottom").scrollLeft(2048);
+    $(".bottom").scrollLeft(1024);
    
 
 //прокрутка экрана
@@ -10,7 +13,7 @@ $(document).ready(function(){
 $(".wrapper").swipe( {
         swipeUp:upSwipe,
         swipeDown:downSwipe,
-        threshold:75
+        threshold:50
 });
 
 //анимация прокрутки и пагинация
@@ -46,19 +49,33 @@ function downSwipe(event){
 
     
 //    работа с ползунком
-//   $(document).on('input', '#slider', function() {
-//        console.log($("#slider").val());
-//        let sliderValue = $("#slider").val();
-//        if (sliderValue > 75){
-//            $(".bottom").animate({scrollLeft: '+=2048'}, 500);
-//            $("#slider").val(100);
-//        }
-//    });
+   $(document).on('input', '#slider', function() {
+        let sliderVal = $("#slider").val();
+        if ((sliderVal > 74) && (sliderValTop == 0)) {
+            $(".bottom").animate({scrollLeft: '2060'}, 400);
+            console.log('на 3 экран');
+            sliderValTop = 1;
+            sliderValMiddle = 0;
+        } 
+       else if ((sliderVal > 25) && (sliderVal < 75) && (sliderValMiddle == 0)) {
+            $(".bottom").animate({scrollLeft: '1032'}, 400);
+            console.log('на 2 экран');
+            sliderValMiddle = 1;
+            sliderValTop = 0;
+            sliderValBottom = 0;
+        } else if ((sliderVal < 25) && (sliderValBottom == 0)) {
+            $(".bottom").animate({scrollLeft: '0'}, 400);
+            console.log('на 1 экран');
+            sliderValMiddle = 0;
+            sliderValBottom = 1;
+        }
+    });
     
-   $('input').change(function() {
-    console.log('Change: ' + $(this).val())
-       alert('asdasd');
-  });
+    
+//    оно не работает x_X 
+//   $('input').change(function() {
+//    console.log('Change: ' + $(this).val())
+//  });
     
     
 });
