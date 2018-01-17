@@ -1,5 +1,8 @@
+
+
 $(document).ready(function(){
-    
+
+    $(".bottom").scrollLeft(2048);
    
 
 //прокрутка экрана
@@ -41,6 +44,21 @@ function downSwipe(event){
         $('body,html').animate({scrollTop: top}, 500);
 }
 
+    
+//    работа с ползунком
+//   $(document).on('input', '#slider', function() {
+//        console.log($("#slider").val());
+//        let sliderValue = $("#slider").val();
+//        if (sliderValue > 75){
+//            $(".bottom").animate({scrollLeft: '+=2048'}, 500);
+//            $("#slider").val(100);
+//        }
+//    });
+    
+   $('input').change(function() {
+    console.log('Change: ' + $(this).val())
+       alert('asdasd');
+  });
     
     
 });
