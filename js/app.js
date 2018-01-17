@@ -5,7 +5,7 @@ let sliderValBottom = 0;
 $(document).ready(function(){
     
 
-    $(".bottom").scrollLeft(1024);
+    $(".bottom").scrollLeft(2060);
    
 
 //прокрутка экрана
@@ -13,7 +13,9 @@ $(document).ready(function(){
 $(".wrapper").swipe( {
         swipeUp:upSwipe,
         swipeDown:downSwipe,
-        threshold:50
+//        swipeLeft:blyat,
+        maxTimeThreshold: 200,
+        threshold:100
 });
 
 //анимация прокрутки и пагинация
@@ -46,6 +48,10 @@ function downSwipe(event){
     }
         $('body,html').animate({scrollTop: top}, 500);
 }
+    
+function blyat(event){
+    alert ('cerf');
+}
 
     
 //    работа с ползунком
@@ -73,9 +79,25 @@ function downSwipe(event){
     
     
 //    оно не работает x_X 
-//   $('input').change(function() {
-//    console.log('Change: ' + $(this).val())
-//  });
+    let slider = $('input[type="range"]');
+   slider.change(function() {
+       console.log('хехей');
+       let sliderVal = $("#slider").val();
+    if (sliderVal > 74) {
+           slider.animate({
+               value: "100",
+           }, 300);
+    } else if ((sliderVal > 25) && (sliderVal < 75)){
+        slider.animate({
+               value: "50",
+           }, 300);
+    } else {
+        slider.animate({
+               value: "0",
+           }, 300);
+    }
+  });
+    
     
     
 });
