@@ -46,10 +46,6 @@ function downSwipe(event){
     }
         $('body,html').animate({scrollTop: top}, 500);
 }
-    
-function blyat(event){
-    alert ('cerf');
-}
 
     
 //    работа с ползунком
@@ -76,7 +72,6 @@ function blyat(event){
     });
     
     
-//    оно не работает x_X 
     let slider = $('input[type="range"]');
    slider.change(function() {
        console.log('хехей');
